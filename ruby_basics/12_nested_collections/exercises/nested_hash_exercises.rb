@@ -64,9 +64,8 @@ def find_language_facts(languages, language_name, fact_index = 0)
   #                 is_beautiful?: false }
   # }
   language = languages[language_name.to_sym]
+  puts language
   if language && language[:facts].is_a?(Array)
-    return language[:facts][fact_index.to_i]
-  else
-    return "Invalid input"
+    language[:facts][fact_index.to_i]
   end
 end
